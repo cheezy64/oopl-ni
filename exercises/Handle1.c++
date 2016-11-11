@@ -56,4 +56,8 @@ TEST(Handle_Fixture, test_4) {
           Shape y = new Circle(2, 3, 5);
     ASSERT_NE(x, y);
     y = x;
-    ASSERT_EQ(x, y);}
+    ASSERT_EQ(x, y);
+    y.move(5, 6);
+    ASSERT_EQ(new Circle(2, 3, 4), x);
+    ASSERT_EQ(new Circle(5, 6, 4), y);
+    ASSERT_EQ(3.14 * 4 * 4, y.area());}
